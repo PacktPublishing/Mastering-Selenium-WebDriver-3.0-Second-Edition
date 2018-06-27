@@ -1,0 +1,16 @@
+version: '2.2'
+services:
+  selenium-hub:
+    image: selenium/hub:3.11.0
+    ports:
+    - 4444:4444
+
+  chrome:
+    image: selenium/node-chrome:3.11.0
+    links:
+    - selenium-hub:hub
+
+  firefox:
+    image: selenium/node-firefox:3.11.0
+    links:
+    - selenium-hub:hub

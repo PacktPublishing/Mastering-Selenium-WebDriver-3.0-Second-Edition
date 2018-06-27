@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>Drag and drop</title>
+    <style type="text/css">
+        li {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #000;
+            margin: 10px;
+            width: 150px;
+            border-width: 2px;
+            border-color: black;
+            border-style: groove;
+            background: #eee;
+            padding: 10px;
+            display: block;
+        }
+
+        *[draggable=true] {
+            cursor: move;
+        }
+
+        ul {
+            margin-left: 200px;
+            min-height: 300px;
+        }
+
+        #obliterate {
+            background-color: green;
+            height: 250px;
+            width: 166px;
+            float: left;
+            border: 5px solid #000;
+            position: relative;
+            margin-top: 0;
+        }
+
+        #obliterate.over {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Drag and drop</h1>
+</header>
+
+
+<article>
+    <p>Drag items over to the green square to remove them</p>
+
+    <div id="obliterate"></div>
+    <ul>
+        <li><a id="one" href="#" draggable="true">one</a></li>
+        <li><a id="two" href="#" draggable="true">two</a></li>
+        <li><a id="three" href="#" draggable="true">three</a></li>
+        <li><a id="four" href="#" draggable="true">four</a></li>
+        <li><a id="five" href="#" draggable="true">five</a></li>
+    </ul>
+</article>
+</body>
+<script>
+    var draggableElements = document.querySelectorAll('li > a'),
+            obliterator = document.getElementById('obliterate');
+
+    for (var i = 0; i < draggableElements.length; i++) {
+        element = draggableElements[i];
+        element.addEventListener('dragstart', function (event) {
+            event.dataTransfer.effectAllowed = 'copy';
+            event.dataTransfer.setData('being-dragged', this.id);
+        });
+    }
+
+    obliterator.addEventListener('dragover', function (event) {
+        if (event.preventDefault) event.preventDefault();
+        obliterator.className = 'over';
+        event.dataTransfer.dropEffect = 'copy';
+        return false;
+    });
+
+    obliterator.addEventListener('dragleave', function () {
+        obliterator.className = '';
+        return false;
+    });
+
+    obliterator.addEventListener('drop', function (event) {
+        var elementToDelete = document.getElementById(event.dataTransfer.getData('being-dragged'));
+        elementToDelete.parentNode.removeChild(elementToDelete);
+        obliterator.className = '';
+        return false;
+    });
+</script>
+</html>

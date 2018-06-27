@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Menu</title>
+    <style type="text/css">
+        body {
+            padding: 20px 50px 150px;
+            text-align: center;
+            background: white;
+        }
+
+        ul {
+            text-align: left;
+            display: inline;
+            margin: 0;
+            padding: 15px 4px 17px 0;
+            list-style: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+
+        ul li {
+            font: bold 12px/18px sans-serif;
+            display: inline-block;
+            margin-right: -4px;
+            position: relative;
+            padding: 15px 20px;
+            background: mediumpurple;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        ul li:hover {
+            background: purple;
+            color: white;
+        }
+
+        ul li ul {
+            padding: 0;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            width: 150px;
+            box-shadow: none;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            -transition: opacity 0.3s;
+        }
+
+        ul li ul li {
+            background: #555;
+            display: block;
+            color: white;
+            text-shadow: 0 -1px 0 black;
+        }
+
+        ul li ul li:hover {
+            background: dimgrey;
+        }
+
+        ul li:hover ul {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+
+</head>
+<body>
+<ul>
+    <li id="home">Home</li>
+    <li id="about">About</li>
+    <li id="services">
+        Services
+        <ul>
+            <li>Web Design</li>
+            <li>Web Development</li>
+            <li>Illustrations</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

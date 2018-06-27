@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Chapter 8.iml" filepath="$PROJECT_DIR$/.idea/Chapter 8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part 1/mastering-selenium-testng.iml" filepath="$PROJECT_DIR$/Part 1/mastering-selenium-testng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part 4/mastering-selenium-testng (3).iml" filepath="$PROJECT_DIR$/Part 4/mastering-selenium-testng (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part 6/mastering-selenium-testng (5).iml" filepath="$PROJECT_DIR$/Part 6/mastering-selenium-testng (5).iml" />
+    </modules>
+  </component>
+</project>

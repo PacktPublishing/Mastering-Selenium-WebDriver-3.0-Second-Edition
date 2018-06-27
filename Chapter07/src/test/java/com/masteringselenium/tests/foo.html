@@ -1,0 +1,13 @@
+<script>
+    function returnDataToSelenium() {
+        var userInput = document.getElementById('setest_collect_data').valueOf();
+        dataInput.remove();
+        callback(userInput);
+    }
+</script>
+
+<div>
+<p>Enter some text to use in the Selenium test:</p>
+<input type="text" id="setest_collect_data">
+<button onclick="returnDataToSelenium()">submit</button>
+</div>

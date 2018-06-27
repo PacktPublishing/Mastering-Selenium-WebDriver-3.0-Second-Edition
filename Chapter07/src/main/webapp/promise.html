@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    var callback = arguments[arguments.length - 1];
+    callback();
+    new Promise(
+            function (resolve, reject) {
+                resolve();
+            }).then(
+            function (doWeContinue) {
+                console.log('Connecting to Google: ' + doWeContinue);
+                callback(doWeContinue);
+            }
+    );
+
+    calback();
+    window.setTimeout(arguments[arguments.length - 1], 25000);
+</script>
+</html>

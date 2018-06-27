@@ -1,0 +1,15 @@
+{
+  "name": "mastering-selenium-appium",
+  "private": false,
+  "license": "Apache 2",
+  "version": "0.0.0",
+  "description": "Download appium for automated tests",
+  "devDependencies": {
+    "appium": "1.8.1",
+    "deviceconsole": "1.0.1"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "pretest": "npm install"
+  }
+}
