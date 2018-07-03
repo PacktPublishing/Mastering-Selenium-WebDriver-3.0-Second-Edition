@@ -71,7 +71,7 @@ With the following software and hardware list you can run all code files present
 
 ## Get to Know the Author
 **Mark Collin**
-Mark Collin has been working in the software industry since 2001. He started his career in the financial sector before moving into consultancy. He has an eclectic range of skills and proficiencies, which include test automation, security and penetration testing, and
+has been working in the software industry since 2001. He started his career in the financial sector before moving into consultancy. He has an eclectic range of skills and proficiencies, which include test automation, security and penetration testing, and
 performance testing. Mark is the creator and maintainer of driver-binary-downloadermaven-plugin, and the Query library used in this book. He is also a core contributor to jmeter-maven-plugin, a tool that allows you to run JMeter tests through Maven. He has also
 contributed code to the core Selenium code base.
 
